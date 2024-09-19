@@ -1,0 +1,13 @@
+*.log
+.cache
+.DS_Store
+src/.temp
+.temp/downloads/*
+node_modules
+dist
+wp-images/*
+logfile
+app.env
+
+# Use yarn.lock instead
+package-lock.json
