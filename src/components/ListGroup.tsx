@@ -24,15 +24,48 @@
 import React from "react";
 
 export default function ListGroup() {
+  // rendering items dynamically
+
+  // //	Dynamic Render – v1
+  // const items = [
+  //   "Manila",
+  //   "Chicago",
+  //   "New Zealand",
+  //   "United Kingdom",
+  //   "Tokyo",
+  //   "Canada",
+  //   "Australia",
+  // ];
+
+  // return (
+  //   <>
+  //     <h1>List Group</h1>
+  //     <ul className="list-group">
+  //       {items.map((item) => (
+  //         <li key={item}>{item}</li>
+  //       ))}
+  //     </ul>
+  //   </>
+  // );
+
+  //	Dynamic Render – v2
+  const items2 = [
+    { id: 1, name: "Manila" },
+    { id: 2, name: "Chicago" },
+    { id: 3, name: "New Zealand" },
+    { id: 4, name: "United Kingdom" },
+    { id: 5, name: "Tokyo" },
+    { id: 6, name: "Canada" },
+    { id: 7, name: "Australia" },
+  ];
+
   return (
     <>
       <h1>List Group</h1>
       <ul className="list-group">
-        <li className="list-group-item">An item</li>
-        <li className="list-group-item">A second item</li>
-        <li className="list-group-item">A third item</li>
-        <li className="list-group-item">A fourth item</li>
-        <li className="list-group-item">And a fifth one</li>
+        {items2.map((item2) => (
+          <li key={item2.id}>{item2.name}</li>
+        ))}
       </ul>
     </>
   );
