@@ -158,8 +158,6 @@ export default function ListGroup() {
   // arr[0] // variable (selectedIndex)
   // arr[1] // updated function
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
-  // conditional rendering - v4 w/ TOF Method
   // if the item is empty
   return (
     <>
@@ -176,6 +174,9 @@ export default function ListGroup() {
             key={item}
             onMouseOver={() => {
               setSelectedIndex(index);
+            }}
+            onMouseOut={() => {
+              setSelectedIndex(-1);
             }}
           >
             {item}
