@@ -5,6 +5,8 @@ import { MouseEvent } from "react";
 // Managing State using useState
 import { useState } from "react";
 
+// import { items, heading } from "../../src/data.js";
+
 // function ListGroup() {
 //   return (
 //     // with Fragment - the component will be rendered on its own.
@@ -28,19 +30,24 @@ import { useState } from "react";
 
 import React from "react";
 
-export default function ListGroup() {
+// ===== props
+interface ListProps {
+  items: string[];
+  heading: string;
+}
+export default function ListGroup({ heading, items }: ListProps) {
   // rendering items dynamically
 
-  //	Dynamic Render – v1
-  const items = [
-    "Manila",
-    "Chicago",
-    "New Zealand",
-    "United Kingdom",
-    "Tokyo",
-    "Canada",
-    "Australia",
-  ];
+  // //	Dynamic Render – v1
+  // const items = [
+  //   "Manila",
+  //   "Chicago",
+  //   "New Zealand",
+  //   "United Kingdom",
+  //   "Tokyo",
+  //   "Canada",
+  //   "Australia",
+  // ];
 
   // return (
   //   <>
@@ -158,10 +165,11 @@ export default function ListGroup() {
   // arr[0] // variable (selectedIndex)
   // arr[1] // updated function
   const [selectedIndex, setSelectedIndex] = useState(-1);
+
   // if the item is empty
   return (
     <>
-      <h1>List Group</h1>
+      <h1>{heading}</h1>
       {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
         {items.map((item, index) => (
