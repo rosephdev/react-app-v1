@@ -2,6 +2,9 @@
 // Event Handler = MouseEvent
 import { MouseEvent } from "react";
 
+// Managing State using useState
+import { useState } from "react";
+
 // function ListGroup() {
 //   return (
 //     // with Fragment - the component will be rendered on its own.
@@ -129,8 +132,32 @@ export default function ListGroup() {
   //   </>
   // );
 
-  // Event Handler
-  const handleClick = (event: MouseEvent) => console.log(event);
+  // // Event Handler
+  // const handleClick = (event: MouseEvent) => console.log(event);
+
+  // // conditional rendering - v4 w/ TOF Method
+  // // if the item is empty
+  // return (
+  //   <>
+  //     <h1>List Group</h1>
+  //     {items.length === 0 && <p>No items found</p>}
+  //     <ul className="list-group">
+  //       {items.map((item, index) => (
+  //         <li className="list-group-item" key={item} onClick={handleClick}>
+  //           {item}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   </>
+  // );
+
+  // Managing States
+  // const selectedIndex = 0; // -1 = no items selected, 0 = the first item will be selected
+
+  // const arr = useState(-1)
+  // arr[0] // variable (selectedIndex)
+  // arr[1] // updated function
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   // conditional rendering - v4 w/ TOF Method
   // if the item is empty
@@ -140,7 +167,17 @@ export default function ListGroup() {
       {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
         {items.map((item, index) => (
-          <li className="list-group-item" key={item} onClick={handleClick}>
+          <li
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            key={item}
+            onMouseOver={() => {
+              setSelectedIndex(index);
+            }}
+          >
             {item}
           </li>
         ))}
