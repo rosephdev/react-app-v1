@@ -59,9 +59,80 @@ export default function ListGroup() {
     { id: 7, name: "Australia" },
   ];
 
+  //  items2 = [];
+
+  // // conditional rendering - v1
+  // // if the item is empty
+  // if (items2.length === 0) {
+  //   return <p>No item found</p>;
+  // } else {
+  //   // if the item is NOT empty
+  //   return (
+  //     <>
+  //       <h1>List Group</h1>
+  //       <ul className="list-group">
+  //         {items2.map((item2) => (
+  //           <li key={item2.id}>{item2.name}</li>
+  //         ))}
+  //       </ul>
+  //     </>
+  //   );
+  // }
+
+  // // conditional rendering - v2
+  // // if the item is empty
+
+  // // if the item is NOT empty
+  // return (
+  //   <>
+  //     <h1>List Group</h1>
+  //     {items2.length === 0 ? <p>No items found</p> : null}
+  //     <ul className="list-group">
+  //       {items2.map((item2) => (
+  //         <li key={item2.id}>{item2.name}</li>
+  //       ))}
+  //     </ul>
+  //   </>
+  // );
+
+  // // conditional rendering - v3 w/ const variable
+  // // if the item is empty
+  // const message = items2.length === 0 ? <p>No items found</p> : null;
+  // return (
+  //   <>
+  //     <h1>List Group</h1>
+  //     {message}
+  //     <ul className="list-group">
+  //       {items2.map((item2) => (
+  //         <li key={item2.id}>{item2.name}</li>
+  //       ))}
+  //     </ul>
+  //   </>
+  // );
+
+  // // conditional rendering - v4 w/ JS function operator
+  // // if the item is empty
+  // const getMessage = () => {
+  //   return items2.length === 0 ? <p>No items found</p> : null;
+  // };
+  // return (
+  //   <>
+  //     <h1>List Group</h1>
+  //     {getMessage()}
+  //     <ul className="list-group">
+  //       {items2.map((item2) => (
+  //         <li key={item2.id}>{item2.name}</li>
+  //       ))}
+  //     </ul>
+  //   </>
+  // );
+
+  // conditional rendering - v4 w/ TOF Method
+  // if the item is empty
   return (
     <>
       <h1>List Group</h1>
+      {items2.length === 0 && <p>No items found</p>}
       <ul className="list-group">
         {items2.map((item2) => (
           <li key={item2.id}>{item2.name}</li>
