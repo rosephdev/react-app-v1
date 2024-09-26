@@ -1,4 +1,6 @@
 // import { Fragment } from "react";
+// Event Handler = MouseEvent
+import { MouseEvent } from "react";
 
 // function ListGroup() {
 //   return (
@@ -26,16 +28,16 @@ import React from "react";
 export default function ListGroup() {
   // rendering items dynamically
 
-  // //	Dynamic Render – v1
-  // const items = [
-  //   "Manila",
-  //   "Chicago",
-  //   "New Zealand",
-  //   "United Kingdom",
-  //   "Tokyo",
-  //   "Canada",
-  //   "Australia",
-  // ];
+  //	Dynamic Render – v1
+  const items = [
+    "Manila",
+    "Chicago",
+    "New Zealand",
+    "United Kingdom",
+    "Tokyo",
+    "Canada",
+    "Australia",
+  ];
 
   // return (
   //   <>
@@ -48,16 +50,16 @@ export default function ListGroup() {
   //   </>
   // );
 
-  //	Dynamic Render – v2
-  const items2 = [
-    { id: 1, name: "Manila" },
-    { id: 2, name: "Chicago" },
-    { id: 3, name: "New Zealand" },
-    { id: 4, name: "United Kingdom" },
-    { id: 5, name: "Tokyo" },
-    { id: 6, name: "Canada" },
-    { id: 7, name: "Australia" },
-  ];
+  // //	Dynamic Render – v2
+  // const items2 = [
+  //   { id: 1, name: "Manila" },
+  //   { id: 2, name: "Chicago" },
+  //   { id: 3, name: "New Zealand" },
+  //   { id: 4, name: "United Kingdom" },
+  //   { id: 5, name: "Tokyo" },
+  //   { id: 6, name: "Canada" },
+  //   { id: 7, name: "Australia" },
+  // ];
 
   //  items2 = [];
 
@@ -127,15 +129,20 @@ export default function ListGroup() {
   //   </>
   // );
 
+  // Event Handler
+  const handleClick = (event: MouseEvent) => console.log(event);
+
   // conditional rendering - v4 w/ TOF Method
   // if the item is empty
   return (
     <>
       <h1>List Group</h1>
-      {items2.length === 0 && <p>No items found</p>}
+      {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
-        {items2.map((item2) => (
-          <li key={item2.id}>{item2.name}</li>
+        {items.map((item, index) => (
+          <li className="list-group-item" key={item} onClick={handleClick}>
+            {item}
+          </li>
         ))}
       </ul>
     </>
