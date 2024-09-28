@@ -4,9 +4,16 @@ import ListGroup from "./components/ListGroup";
 import { items, heading } from "../src/data.js";
 
 function App() {
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
   return (
     <div>
-      <ListGroup heading={heading} items={items} />
+      <ListGroup
+        heading={heading}
+        items={items}
+        onSelectItem={handleSelectItem}
+      />
     </div>
   );
 }

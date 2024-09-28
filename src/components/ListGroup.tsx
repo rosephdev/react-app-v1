@@ -34,8 +34,12 @@ import React from "react";
 interface ListProps {
   items: string[];
   heading: string;
+
+  // passing function via props
+  // (item: string) => void
+  onSelectItem: (item: string) => void;
 }
-export default function ListGroup({ heading, items }: ListProps) {
+export default function ListGroup({ heading, items, onSelectItem }: ListProps) {
   // rendering items dynamically
 
   // //	Dynamic Render – v1
@@ -182,6 +186,7 @@ export default function ListGroup({ heading, items }: ListProps) {
             key={item}
             onMouseOver={() => {
               setSelectedIndex(index);
+              onSelectItem(item);
             }}
             onMouseOut={() => {
               setSelectedIndex(-1);
