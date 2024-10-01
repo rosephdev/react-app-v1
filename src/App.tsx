@@ -1,7 +1,8 @@
 import ListGroup from "./components/ListGroup";
 // import Message from "./Message";
 
-import { items, heading } from "../src/data.js";
+import { items, heading, alertText } from "../src/data.js";
+import Alert from "./components/Alert.js";
 
 function App() {
   const handleSelectItem = (item: string) => {
@@ -9,11 +10,12 @@ function App() {
   };
   return (
     <div>
-      <ListGroup
+      {/* <ListGroup
         heading={heading}
         items={items}
         onSelectItem={handleSelectItem}
-      />
+      /> */}
+      <Alert children={alertText} />
     </div>
   );
 }
