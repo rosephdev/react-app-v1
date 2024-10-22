@@ -7,15 +7,21 @@ import Alert from "./components/Alert.js";
 import Button from "./components/Button.js";
 
 function App() {
+  const [alertVisibility, setAlertVisibility] = useState(false);
+
   return (
     <div>
-      {/* <ListGroup
-        heading={heading}
-        items={items}
-        onSelectItem={handleSelectItem}
-      /> */}
-      {/* <Alert children={alertText} /> */}
-      <Button children={buttonText} setColor="btn-warning" />
+      {alertVisibility && (
+        <Alert
+          onClose={() => setAlertVisibility(false)}
+          children={alertText}
+        ></Alert>
+      )}
+      <Button
+        color="warning"
+        onClick={() => setAlertVisibility(true)}
+        children={buttonText}
+      />
     </div>
   );
 }

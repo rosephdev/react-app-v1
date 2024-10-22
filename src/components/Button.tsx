@@ -7,8 +7,12 @@ interface ButtonProps {
   onClick: () => void; // triggers a click on a button
 }
 
-const Button = ({ children, setColor }: ButtonProps) => {
-  return <button className={`btn btn-lg ${setColor}`}>{children}</button>;
+const Button = ({ children, color, onClick }: ButtonProps) => {
+  return (
+    <button className={`btn btn-lg btn-${color}`} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
