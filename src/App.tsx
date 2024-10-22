@@ -1,13 +1,12 @@
 import ListGroup from "./components/ListGroup";
 // import Message from "./Message";
+import { useState } from "react";
 
-import { items, heading, alertText } from "../src/data.js";
+import { items, heading, alertText, buttonText } from "../src/data.js";
 import Alert from "./components/Alert.js";
+import Button from "./components/Button.js";
 
 function App() {
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
   return (
     <div>
       {/* <ListGroup
@@ -15,7 +14,8 @@ function App() {
         items={items}
         onSelectItem={handleSelectItem}
       /> */}
-      <Alert children={alertText} />
+      {/* <Alert children={alertText} /> */}
+      <Button children={buttonText} setColor="btn-warning" />
     </div>
   );
 }
