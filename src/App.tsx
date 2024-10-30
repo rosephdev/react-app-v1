@@ -1,10 +1,10 @@
 import ListGroup from "./components/ListGroup";
 // import Message from "./Message";
-import { useState } from "react";
+// import { useState } from "react";
 
 import { items, heading, alertText, buttonText } from "../src/data.js";
-import Alert from "./components/Alert.js";
-import Button from "./components/Button.js";
+// import Alert from "./components/Alert.js";
+// import Button from "./components/Button.js";
 
 // function App() {
 //   const [alertVisibility, setAlertVisibility] = useState(false);
@@ -26,7 +26,7 @@ import Button from "./components/Button.js";
 //   );
 // }
 function App() {
-  const [alertVisibility, setAlertVisibility] = useState(false);
+  // const [alertVisibility, setAlertVisibility] = useState(false);
 
   return (
     <div>
