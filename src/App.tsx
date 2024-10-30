@@ -1,6 +1,7 @@
 import ListGroup from "./components/ListGroup";
 // import Message from "./Message";
 // import { useState } from "react";
+import "./App.css";
 
 import { items, heading, alertText, buttonText } from "../src/data.js";
 // import Alert from "./components/Alert.js";
