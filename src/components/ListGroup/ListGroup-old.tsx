@@ -170,7 +170,38 @@ export default function ListGroup({ heading, items, onSelectItem }: ListProps) {
   // arr[1] // updated function
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
-  // if the item is empty
+  //   // if the item is empty
+  //   return (
+  //     <>
+  //       <h1>{heading}</h1>
+  //       {items.length === 0 && <p>No items found</p>}
+  //       <ul className="list-group">
+  //         {items.map((item, index) => (
+  //           <li
+  //             className={
+  //               selectedIndex === index
+  //              //   ? "list-group-item active"
+  //                 : "list-group-item"
+  //             }
+  //             key={item}
+  //             onMouseOver={() => {
+  //               setSelectedIndex(index);
+  //               onSelectItem(item);
+  //             }}
+  //             onMouseOut={() => {
+  //               setSelectedIndex(-1);
+  //             }}
+  //           >
+  //             {item}
+  //           </li>
+  //         ))}
+  //       </ul>
+  //     </>
+  //   );
+  // }
+
+  // Vanilla/Plain CSS
+  import "../ListGroup/ListGroup.css";
   return (
     <>
       <h1>{heading}</h1>
