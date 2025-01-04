@@ -26,12 +26,24 @@ import { items, heading, alertText, buttonText } from "../src/data.js";
 //     </div>
 //   );
 // }
+// function App() {
+//   // const [alertVisibility, setAlertVisibility] = useState(false);
+
+//   return (
+//     <div>
+//       <ListGroup heading={heading} items={items} />
+//     </div>
+//   );
+// }
+
+// React Icons - Testing
+import { BsFillCalendarFill } from "react-icons/bs";
 function App() {
   // const [alertVisibility, setAlertVisibility] = useState(false);
 
   return (
     <div>
-      <ListGroup heading={heading} items={items} />
+      <BsFillCalendarFill size={50} color="blue" />
     </div>
   );
 }
