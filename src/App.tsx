@@ -38,12 +38,24 @@ import { items, heading, alertText, buttonText } from "../src/data.js";
 
 // React Icons - Testing
 import { BsFillCalendarFill } from "react-icons/bs";
+import styled from "styled-components";
+
+const CalenderIcon = styled.span`
+  font-size: 50px;
+  color: blue;
+`;
+
 function App() {
   // const [alertVisibility, setAlertVisibility] = useState(false);
 
   return (
     <div>
-      <BsFillCalendarFill size={50} color="blue" />
+      <CalenderIcon>
+        <BsFillCalendarFill />
+        <BsFillCalendarFill />
+        <BsFillCalendarFill />
+        <BsFillCalendarFill />
+      </CalenderIcon>
     </div>
   );
 }
