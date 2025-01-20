@@ -3,7 +3,7 @@ import ListGroup from "./components/ListGroup";
 // import { useState } from "react";
 import "./App.css";
 
-import { items, heading, alertText, buttonText } from "../src/data.js";
+// import { items, heading, alertText, buttonText } from "../src/data.js";
 // import Alert from "./components/Alert.js";
 // import Button from "./components/Button.js";
 
@@ -36,23 +36,34 @@ import { items, heading, alertText, buttonText } from "../src/data.js";
 //   );
 // }
 
-// React Icons - Testing
-import { TbNumber17Small } from "react-icons/tb";
-import styled from "styled-components";
+// // React Icons - Testing
+// import { TbNumber17Small } from "react-icons/tb";
+// import styled from "styled-components";
 
-const CalenderIcon = styled.span`
-  font-size: 50px;
-  color: blue;
-`;
+// const CalenderIcon = styled.span`
+//   font-size: 50px;
+//   color: blue;
+// `;
+
+// function App() {
+//   // const [alertVisibility, setAlertVisibility] = useState(false);
+
+//   return (
+//     <div>
+//       <CalenderIcon>
+//         <TbNumber17Small />
+//       </CalenderIcon>
+//     </div>
+//   );
+// }
+
+// ========= Exercises: Using CSS Modules ==========
+import Button from "./components/Button/Button";
 
 function App() {
-  // const [alertVisibility, setAlertVisibility] = useState(false);
-
   return (
     <div>
-      <CalenderIcon>
-        <TbNumber17Small />
-      </CalenderIcon>
+      <Button onClick={() => {}}>rd+</Button>
     </div>
   );
 }

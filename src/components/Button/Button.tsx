@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Button.module.css";
 
 interface ButtonProps {
   children: string; // children prop passed down to the App component
@@ -7,9 +8,18 @@ interface ButtonProps {
   onClick: () => void; // triggers a click on a button
 }
 
-const Button = ({ children, color, onClick }: ButtonProps) => {
+// const Button = ({ children, color, onClick }: ButtonProps) => {
+//   return (
+//     <button className={`btn btn-lg btn-${color}`} onClick={onClick}>
+//       {children}
+//     </button>
+//   );
+const Button = ({ children, onClick, color = "primary" }: ButtonProps) => {
   return (
-    <button className={`btn btn-lg btn-${color}`} onClick={onClick}>
+    <button
+      className={[styles.btn, styles["btn-" + color]].join(" ")}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
