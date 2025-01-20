@@ -37,7 +37,7 @@ import { items, heading, alertText, buttonText } from "../src/data.js";
 // }
 
 // React Icons - Testing
-import { BsFillCalendarFill } from "react-icons/bs";
+import { TbNumber17Small } from "react-icons/tb";
 import styled from "styled-components";
 
 const CalenderIcon = styled.span`
@@ -51,10 +51,7 @@ function App() {
   return (
     <div>
       <CalenderIcon>
-        <BsFillCalendarFill />
-        <BsFillCalendarFill />
-        <BsFillCalendarFill />
-        <BsFillCalendarFill />
+        <TbNumber17Small />
       </CalenderIcon>
     </div>
   );
