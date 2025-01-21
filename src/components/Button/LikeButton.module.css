@@ -7,8 +7,8 @@
   margin: 0 3%;
 }
 .btn-secondary {
-  background: gray;
-  color: white;
+  background: white;
+  color: black;
 }
 .btn:hover {
   background: black;

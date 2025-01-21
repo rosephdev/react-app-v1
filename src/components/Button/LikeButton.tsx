@@ -14,7 +14,11 @@ interface ButtonProps {
 //       {children}
 //     </button>
 //   );
-const LikeButton = ({ children, onClick, color = "primary" }: ButtonProps) => {
+const LikeButton = ({
+  children,
+  onClick,
+  color = "secondary",
+}: ButtonProps) => {
   return (
     <button
       className={[styles.btn, styles["btn-" + color]].join(" ")}
