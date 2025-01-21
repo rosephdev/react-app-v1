@@ -59,11 +59,16 @@ import "./App.css";
 
 // ========= Exercises: Using CSS Modules ==========
 import Button from "./components/Button/Button";
+import LikeButton from "./components/Button/LikeButton";
+import { AiFillLike } from "react-icons/ai";
 
 function App() {
   return (
     <div>
       <Button onClick={() => {}}>rd+</Button>
+      <LikeButton onClick={() => {}}>
+        <AiFillLike />
+      </LikeButton>
     </div>
   );
 }

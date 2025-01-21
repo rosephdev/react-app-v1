@@ -1,0 +1,16 @@
+.btn {
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin: 0 3%;
+}
+.btn-secondary {
+  background: gray;
+  color: white;
+}
+.btn:hover {
+  background: black;
+  color: white;
+}
