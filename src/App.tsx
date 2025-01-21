@@ -57,18 +57,33 @@ import "./App.css";
 //   );
 // }
 
-// ========= Exercises: Using CSS Modules ==========
+// // ========= Exercises: Using CSS Modules ==========
+// import Button from "./components/Button/Button";
+// import LikeButton from "./components/Button/LikeButton";
+
+// // React Icons
+// import { AiFillLike } from "react-icons/ai";
+
+// function App() {
+//   return (
+//     <div>
+//       <Button onClick={() => {}}>rd+</Button>
+//       <LikeButton onClick={() => {}}>
+//         <AiFillLike />
+//       </LikeButton>
+//     </div>
+//   );
+// }
+
+// ========= Creating Like Button ==========
 import Button from "./components/Button/Button";
 import LikeButton from "./components/Button/LikeButton";
-import { AiFillLike } from "react-icons/ai";
+import Like from "./components/Button/Like";
 
 function App() {
   return (
     <div>
-      <Button onClick={() => {}}>rd+</Button>
-      <LikeButton onClick={() => {}}>
-        <AiFillLike />
-      </LikeButton>
+      <Like onClick={() => console.log("clicked")} />
     </div>
   );
 }
